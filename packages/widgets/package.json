@@ -1,14 +1,13 @@
 {
   "name": "widgets",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && ng build zc-login && ng build zc-menu",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "packagr": "ng build zc-login && ng build zc-menu"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
