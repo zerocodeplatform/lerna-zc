@@ -1,0 +1,15 @@
+{
+	"scripts": {
+		"postinstall": "lerna bootstrap --concurrency=1",
+		"test": "jest",
+		"lint": "eslint .",
+		"format": "prettier --write --loglevel silent *.js packages/{base,core}/{lib,src}/**/*.js",
+		"preformat": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+		"start": "yarn babelify:watch",
+		"babelify:watch": "lerna run --parallel babelify -- --watch",
+		"precommit": "yarn format && yarn lint && yarn test"
+	},
+	"devDependencies": {
+		"lerna": "^2.11.0"
+	}
+}
